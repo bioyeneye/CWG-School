@@ -1,0 +1,39 @@
+﻿@model StudentManagementSystem.Models.Application.ViewModel.ApplicationDetailViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ApplicationForm</h4>
+    <hr/>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicationForm.AboutYou)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationForm.AboutYou)
+        </dd>
+
+    </dl>
+</div>
+
+<p>
+    <a href="#" class="btn btn-success">Approve</a>
+    <a href="#" class="btn btn-deepOrange">Reject</a>
+</p>
+<p>    
+    @Html.ActionLink("Back to List", "Index")
+</p>
